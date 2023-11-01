@@ -1,0 +1,24 @@
+
+  kafka
+  aop
+  reflection 
+  generics in reflection
+  ---------------------------------------
+
+./bin/kafka-server-start.sh ./config/server.properties  &  ---for starting kafka
+
+./bin/zookeeper-server-start.sh ./config/zookeeper.properties &     ---- for zookeper start
+
+bin/kafka-console-consumer.sh --topic test1234 --from-beginning --bootstrap-server 172.21.2.58:9092    ---  for console check in consumer 
+
+bin/kafka-topics.sh --bootstrap-server 172.21.2.58:9092 --list
+
+ bin/kafka-topics.sh --create --topic quickstart --bootstrap-server 172.21.2.58:9092    ---- for topic creation
+---------------------------------------------------------------------------------------------------------------------------------
+itlcpu830@cnpoc-worker4:~/kafka/kafka_2.12-3.2.0$ bin/kafka-topics.sh --bootstrap-server 172.21.2.58:9092 --list
+__consumer_offsets
+quickstart
+quickstart-events
+test-topic1234
+test1234
+--------------------------------------------------
